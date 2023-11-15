@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
-import Navbar from "./components/Navbar";
+import SiteNavbar from "./components/Navbar";
+import MainPage from "./components/mainpage";
 
 function App() {
   return (
-    <div className="bg-black min-h-screen">
+    <div>
       <Router>
-        <Navbar />
+        <SiteNavbar />
+        <MainPage />
         <Routes>
           <Route path="/" exact Component={Home} />
           <Route path="/about" element={<About />} />

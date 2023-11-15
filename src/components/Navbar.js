@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { AppBar, Toolbar, Button } from "@mui/material";
 import staff from "../images/person.jpg";
 import { Typography, TextField } from "@mui/material";
+import SearchAppBar from './search-box';
 
-const Navbar = () => {
+const SiteNavbar = () => {
   const [inputText, setInputText] = useState("");
   const inputHandler = (data) => {
     setInputText(data);
@@ -23,21 +24,22 @@ const Navbar = () => {
               <li>community</li>
             </div>
           </div>
-          <div className="flex-1 items-center">
-            <div className="search">
+          <div className="flex-1">
+            {/* <div className="search items-center">
               <TextField
                 id="outlined-basic"
                 onChange={inputHandler}
                 variant="outlined"
-                fullWidth
+                // fullWidth
                 label="Search"
               />
-            </div>
+            </div> */}
+            <SearchAppBar />
           </div>
-          <div className="flex-1 items-center">
-            <ul className="flex list-none">
-              <li className="bg-gray-200 text-white">LOG IN</li>
-              <li className="text-gray-400 bg-yellow-300">SIGN UP</li>
+          <div className="flex float-right ml-96 mr-0">
+            <ul className="flex list-none hover:cursor-pointer items-center space-x-3">
+              <li className="bg-gray-200 text-white px-8 py-2">LOG IN</li>
+              <li className="text-gray-400 bg-yellow-300 px-8 py-2">SIGN UP</li>
             </ul>
           </div>
         </div>
@@ -70,4 +72,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SiteNavbar;
