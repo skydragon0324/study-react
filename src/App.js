@@ -6,16 +6,18 @@ import About from "./components/About";
 import Gallery from "./components/Gallery";
 import SiteNavbar from "./components/Navbar";
 import MainPage from "./components/mainpage";
+import Experience from "./components/experience";
 
 function App() {
   return (
     <div>
       <Router>
         <SiteNavbar />
-        <MainPage />
         <Routes>
-          <Route path="/" exact Component={Home} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" exact Component={MainPage} />
+          <Route path="/home" exact Component={Home} />
+          <Route path="/about" exact Component={About } />
+          <Route path="/experience" exact Component={Experience } />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
