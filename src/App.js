@@ -1,16 +1,16 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Gallery from "./components/Gallery";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Gallery from "./components/pages/Gallery";
 import SiteNavbar from "./components/Navbar";
-import MainPage from "./components/mainpage";
-import Experience from "./components/experience";
+import MainPage from "./components/pages/mainpage";
+import Experience from "./components/pages/experience";
 
 function App() {
   return (
-    <div>
+    <div className="bg-black">
       <Router>
         <SiteNavbar />
         <Routes>

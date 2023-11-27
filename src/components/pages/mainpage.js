@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import staff from "../images/person.jpg";
+import staff from "../../images/person.jpg";
 
 const MainPage = () => {
   return (

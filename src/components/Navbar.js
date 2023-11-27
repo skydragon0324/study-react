@@ -30,25 +30,24 @@ const SiteNavbar = () => {
     <AppBar position="static">
       <Toolbar className="text-white bg-gray-600">
         <div className="flex flex-row">
-          <div className="flex-none ml-48 mr-12">
+          <div className="flex-none ml-48 mr-12 items-center">
             <Link to={"/"}>
-              <img className="w-6 rounded-xl" src={staff} />
+              <img className="w-16 rounded-xl" src={staff} />
             </Link>
           </div>
-          <div className="flex-1 justify-center space-x-2 font-bold">
-            <div className="flex  list-none space-x-12 items-center hover:cursor-pointer">
-              {tabs && tabs.map((tab) => {
-                console.log("tab", tab);
+          <div className="flex">
+            <div className="flex list-none space-x-12 items-center hover:cursor-pointer">
+              {tabs && tabs.map((tab) => (
                 <li
                   key={tab.value}
                   onClick={() => setActiveTab(tab.value)}
                   className={clsx("hover:bg-blue-300", "p-2", "rounded-md", {
                     "bg-gray-800": activeTab == tab.value,
                   })}
-                >sjflsjdflk
+                >
                   <Link to={tab.link}>{tab.label}</Link>
-                </li>;
-              })}
+                </li>
+              ))}
             </div>
           </div>
         </div>
