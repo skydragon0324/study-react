@@ -13,17 +13,19 @@ const SiteNavbar = () => {
     setInputText(data);
   };
 
-  const [activeTab, setActiveTab] = useState("home");
+  const pathname = window.location.pathname;
+  const path = pathname.split("/")[1];
+  const [activeTab, setActiveTab] = useState(path);
 
   const tabs = [
-    { label: "HOME", value: "home", link:'/home'},
-    { label: "ABOUT", value: "about", link:'/about' },
-    { label: "EXPERIENCE", value: "experience", link:'/experience' },
-    { label: "RESUME", value: "resume", link:'/resume' },
-    { label: "SERVICES", value: "service", link:'/service' },
-    { label: "SKILLS", value: "skill", link:'/skill' },
-    { label: "PROJECS", value: "project", link:'/project' },
-    { label: "CONTACT", value: "contact", link:'/contact' },
+    { label: "HOME", value: "home", link: "/home" },
+    { label: "ABOUT", value: "about", link: "/about" },
+    { label: "EXPERIENCE", value: "experience", link: "/experience" },
+    { label: "RESUME", value: "resume", link: "/resume" },
+    { label: "SERVICES", value: "service", link: "/service" },
+    { label: "SKILLS", value: "skill", link: "/skill" },
+    { label: "PROJECS", value: "project", link: "/project" },
+    { label: "CONTACT", value: "contact", link: "/contact" },
   ];
 
   return (
@@ -37,17 +39,20 @@ const SiteNavbar = () => {
           </div>
           <div className="flex">
             <div className="flex list-none space-x-12 items-center hover:cursor-pointer">
-              {tabs && tabs.map((tab) => (
-                <li
-                  key={tab.value}
-                  onClick={() => setActiveTab(tab.value)}
-                  className={clsx("hover:bg-blue-300", "p-2", "rounded-md", {
-                    "bg-gray-800": activeTab == tab.value,
-                  })}
-                >
-                  <Link to={tab.link}>{tab.label}</Link>
-                </li>
-              ))}
+              {tabs &&
+                tabs.map((tab) => (
+                  <Link to={tab.link}>
+                    <li
+                      key={tab.value}
+                      onClick={() => setActiveTab(tab.value)}
+                      className={clsx("hover:bg-blue-300", "p-2", "rounded-md", {
+                        "bg-gray-800": activeTab == tab.value,
+                      })}
+                    >
+                      {tab.label}
+                    </li>
+                  </Link>
+                ))}
             </div>
           </div>
         </div>
