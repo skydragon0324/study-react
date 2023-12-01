@@ -26,7 +26,7 @@ const SiteNavbar = () => {
     <div className="flex flex-row text-white bg-transparent justify-center">
       <div className="flex-none bg-transparent static md:mr-12 mr-1 items-center mt-2">
         <Link to={"/"}>
-          <img className="w-12 rounded-full" src={staff} />
+          <img className="md:w-12 w-6 rounded-full" src={staff} />
         </Link>
       </div>
       <div className="flex">

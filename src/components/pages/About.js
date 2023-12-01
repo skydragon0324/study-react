@@ -1,21 +1,21 @@
 import React from "react";
-import bg_1 from "../../images/bg_1.png";
+import bg_2 from "../../images/bg_2.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="flex justify-center text-white mt-[60px] h-screen">
-      <div className="w-[20%] mr-[100px]">
-        <img src={bg_1} alt="bg_1" className="" />
+    <div className="md:flex md:flex-row flex-col justify-center text-white md:h-screen h-auto">
+      <div className="md:mr-[100px] md:mt-[-60px] md:w-[20%] flex items-center justify-center">
+        <img src={bg_2} alt="bg_2" className="w-[50%] md:w-full" />
       </div>
-      <div className="w-[800px] ml-16">
+      <div className="md:w-[800px] ml-16 md:mt-[60px] mt-[-400px]">
         <div className="flex items-center justify-center">
           <h1 className="text-7xl">About Me</h1>
         </div>
         <div className="flex justify-start mt-12">
           <p className="font-bold text-2xl">
-            Name: <span className="ml-[125px] text-gray-400">Jade Tomas</span>
+            Name: <span className="ml-[125px] text-yellow-400">Jade Tomas</span>
           </p>
         </div>
         <div className="flex justify-start mt-12">
@@ -57,7 +57,7 @@ const About = () => {
             131 <span className="text-white">Projects Completed</span>
           </p>
         </div>
-        <div className="flex justify-around ml-[-100px] mt-6">
+        <div className="flex justify-around ml-[-100px] p-6">
           <Button variant="contained" className="w-32">
             <Link
               to="https://flowcv.com/resume/ftr0a87usm"
