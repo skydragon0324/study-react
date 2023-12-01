@@ -17,9 +17,9 @@ function App() {
         <Routes>
           <Route path="/" exact Component={MainPage} />
           <Route path="/home" exact Component={Home} />
-          <Route path="/about" exact Component={About } />
+          <Route path="/about" exact Component={About} />
           <Route path="/resume" exact Component={Resume} />
-          <Route path="/experience" exact Component={Experience } />
+          <Route path="/experience" exact Component={Experience} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>

@@ -42,7 +42,7 @@ const Resume = () => {
       <div className="flex items-center justify-center">
         <h1 className="text-7xl font-bold">Resume</h1>
       </div>
-      <div className="flex items-center justify-center mt-12">
+      <div className="md:flex items-center justify-center mt-12">
         <p className="text-2xl font-bold text-gray-400 text-center">
           As a dedicated and skilled Front End Developer with over 7 years of
           experience, I prioritize creating fast, user friendly websites <br />{" "}
@@ -56,7 +56,7 @@ const Resume = () => {
         </p>
       </div>
       <Container>
-        <div className="flex flex-row flex-wrap mt-12 justify-evenly w-[1300px]">
+        <div className="md:flex md:flex-row md:flex-wrap mt-12 md:justify-evenly w-3/4">
           <div className="space-y-12">
             <Card
               sx={{
@@ -64,8 +64,8 @@ const Resume = () => {
                 backgroundColor: "rgb(143 143 151)",
                 minHeight: 300,
                 boxShadow: 20,
+                height: 350
               }}
-              classes="bg-gray-500"
             >
               <CardContent>
                 <Typography
@@ -88,11 +88,11 @@ const Resume = () => {
                   seamless user experience across various devices.
                 </Typography>
               </CardContent>
-              <CardActions>
+              <div className="flex justify-center mt-10">
                 <Button variant="contained" onClick={handleOpen}>
                   View More
                 </Button>
-              </CardActions>
+              </div>
             </Card>
             <Card
               sx={{
@@ -100,6 +100,7 @@ const Resume = () => {
                 backgroundColor: "rgb(143 143 151)",
                 minHeight: 300,
                 boxShadow: 20,
+                height: 350
               }}
               classes="bg-gray-500"
             >
@@ -119,9 +120,11 @@ const Resume = () => {
                   seamless communication between the frontend and server
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button variant="contained" onClick={handleOpen1}>View More</Button>
-              </CardActions>
+              <div className="flex justify-center mt-10">
+                <Button variant="contained" onClick={handleOpen1}>
+                  View More
+                </Button>
+              </div>
             </Card>
           </div>
           <div className="space-y-12">
@@ -131,6 +134,7 @@ const Resume = () => {
                 backgroundColor: "rgb(143 143 151)",
                 minHeight: 300,
                 boxShadow: 20,
+                height:350
               }}
               classes="bg-gray-500"
             >
@@ -154,9 +158,11 @@ const Resume = () => {
                   implement RESTful APIs for seamless data retrieval and updates
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button variant="contained" onClick={handleOpen2}>View More</Button>
-              </CardActions>
+              <div className="flex justify-center m-5 mt-16">
+                <Button variant="contained" onClick={handleOpen2}>
+                  View More
+                </Button>
+              </div>
             </Card>
             <Card
               sx={{
@@ -164,6 +170,7 @@ const Resume = () => {
                 backgroundColor: "rgb(143 143 151)",
                 minHeight: 300,
                 boxShadow: 20,
+                height: 350
               }}
               classes="bg-gray-500"
             >
@@ -184,12 +191,11 @@ const Resume = () => {
                   application performance and user experience by 40%
                 </Typography>
               </CardContent>
-              <CardActions>
-                <Button variant="contained" onClick={handleOpen3}
-                >
+              <div className="flex justify-center m-2">
+                <Button variant="contained" onClick={handleOpen3}>
                   View More
                 </Button>
-              </CardActions>
+              </div>
             </Card>
           </div>
         </div>
@@ -213,10 +219,11 @@ const Resume = () => {
             Front end Developer, Cloudhouse
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <li>
-              Translated design concepts into responsive and pixel-perfect web
+            <li className="flex items-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6DCPdqAKvUUH7HLjvl1oSYxyzclvZuJx9dg&usqp=CAU" alt="tick" className="w-5 rounded-full"/>
+              <span>Translated design concepts into responsive and pixel-perfect web
               applications using HTML5, CSS3, and JavaScript, ensuring a
-              seamless user experience across various devices.
+              seamless user experience across various devices.</span>
             </li>
             <li>
               Developed feature-rich single-page applications (SPAs) with a
@@ -233,7 +240,7 @@ const Resume = () => {
               innovative approaches.
             </li>
           </Typography>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <Button variant="contained" onClick={handleClose}>
               Close
             </Button>
@@ -284,7 +291,7 @@ const Resume = () => {
               capabilities.
             </li>
           </Typography>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <Button variant="contained" onClick={handleClose1}>
               Close
             </Button>
@@ -336,7 +343,7 @@ const Resume = () => {
               project delivery
             </li>
           </Typography>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <Button variant="contained" onClick={handleClose2}>
               Close
             </Button>
@@ -395,7 +402,7 @@ const Resume = () => {
               different departments
             </li>
           </Typography>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-5">
             <Button variant="contained" onClick={handleClose3}>
               Close
             </Button>
@@ -403,16 +410,16 @@ const Resume = () => {
         </Box>
       </Modal>
       <div className="flex justify-around ml-[-100px] mt-6 pb-12">
-          <Button variant="contained" className="w-32">
-            <Link
-              to="https://flowcv.com/resume/ftr0a87usm"
-              target="_blank"
-              className="text-yellow-300 font-bold"
-            >
-              Open CV
-            </Link>
-          </Button>
-        </div>
+        <Button variant="contained" className="w-32">
+          <Link
+            to="https://flowcv.com/resume/ftr0a87usm"
+            target="_blank"
+            className="text-yellow-300 font-bold"
+          >
+            Open CV
+          </Link>
+        </Button>
+      </div>
     </div>
   );
 };
