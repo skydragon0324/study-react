@@ -4,7 +4,7 @@ import ImageSlider from "../slide/ImageSlide";
 
 const Home = () => {
   return (
-    <div className="h-screen mt-12">
+    <div className="h-auto mt-12">
       <ImageSlider />
     </div>
   );

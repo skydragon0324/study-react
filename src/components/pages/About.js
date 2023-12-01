@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="md:flex md:flex-row flex-col justify-center text-white md:h-screen h-auto">
-      <div className="md:mr-[100px] md:mt-[-60px] md:w-[20%] flex items-center justify-center">
+      <div className="md:h-3/4 md:w-[20%] flex items-center justify-center">
         <img src={bg_2} alt="bg_2" className="w-[50%] md:w-full" />
       </div>
-      <div className="md:w-[800px] ml-16 md:mt-[60px] mt-[-400px]">
+      <div className="md:w-[800px] ml-16 md:mt-[60px] mt-[-200px]">
         <div className="flex items-center justify-center">
           <h1 className="text-7xl">About Me</h1>
         </div>

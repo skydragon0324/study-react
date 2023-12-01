@@ -49,12 +49,13 @@ const ImageSlider = () => {
 
   const settings = {
     speed: 500,
+    autoPlay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
 
   return (
-    <div className="bg-black overflow-hidden h-[800px] relative">
+    <div className="bg-black overflow-hidden relative">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index}>
