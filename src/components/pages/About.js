@@ -10,7 +10,7 @@ const About = (props) => {
       "h-auto" : props && props.from == "main",
       "h-screen" : props && props.from != "main"
     })}>
-      <div className="md:h-3/4 md:w-[20%] flex items-center justify-center">
+      <div className="md:h-3/4 md:w-[20%] flex flex-row items-center justify-center">
         <img src={bg_2} alt="bg_2" className="w-[50%] md:w-full" />
       </div>
       <div className="md:w-[800px] ml-16 md:mt-[60px] mt-[-200px]">
