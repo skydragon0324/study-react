@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 
 const Service = () => {
     return (
-        <div className="flex mx-auto md:flex-row flex-col space-x-5">
+        <div className="flex mx-auto md:flex-row flex-col space-x-5 w-3/4">
             <div className="border-2 mt-5 border-gray-300 bg-gray-600 hover:border-red-600 p-4 hover:delay-150 hover:animate-pulse hover:cursor-pointer ">
                 <div className="flex justify-center jusitify-items-center">
                     <ImportantDevicesOutlinedIcon color="error" />
