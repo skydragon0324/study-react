@@ -7,9 +7,9 @@ import Resume from "./Resume";
 const MainPage = () => {
   return (
     <>
-    <Home />
-    <About />
-    <Resume />
+    <Home from="main" />
+    <About from="main" />
+    <Resume from="main" />
     </>
   );
 };
